@@ -15,5 +15,6 @@ Metadata.OlyOyster.csv shows the metadata (GPS coordinates and other site info).
 Raw fastq files available at SRA archive: PRJXXXXXXX (https://www.ncbi.nlm.nih.gov/sra....) \
 \
 **Code**\
+"Plink to genepop code" is a simple set of BASH commands to convert PLINK raw format to genepop. 
 
 
