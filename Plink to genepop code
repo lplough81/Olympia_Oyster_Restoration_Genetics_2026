@@ -1,0 +1,23 @@
+###--Script to convert VCF to genepop--###
+
+plink --vcf input.vcf.gz --recode A --out raw --double-id --allow-extra-chr
+
+awk '{$2=$3=$4=$5=$6=""; print $0}' raw.raw > raw.mod
+
+cat raw.mod | tr -s '[:blank:]' ' ' >raw.mod2
+cat raw.mod2 | sed '1s/ /,/g'>raw.mod3
+cat raw.mod3 | sed -e '2,$s/ /,/' >raw.mod4
+
+#replace 0 1 2 with AA AB BB then to 0101, 0102, 0202 AFTER the first comma. 
+awk -F, '{OFS=","; head=$1; $1=""; gsub("0", "AA"); print head $0}' raw.mod4 >raw.mod5
+awk -F, '{OFS=","; head=$1; $1=""; gsub("1", "AB"); print head $0}' raw.mod5 >raw.mod6
+awk -F, '{OFS=","; head=$1; $1=""; gsub("2", "BB"); print head $0}' raw.mod6 >raw.mod7
+
+awk -F, '{OFS=","; head=$1; $1=""; gsub("AA", "0101"); print head $0}' raw.mod7 >raw.mod8
+awk -F, '{OFS=","; head=$1; $1=""; gsub("AB", "0102"); print head $0}' raw.mod8 >raw.mod9
+awk -F, '{OFS=","; head=$1; $1=""; gsub("BB", "0202"); print head $0}' raw.mod9 >raw.mod10
+awk -F, '{OFS=","; head=$1; $1=""; gsub("NA", "0000"); print head $0}' raw.mod10 >raw.mod11
+
+#manual addition to Genepop file (adding POP, add header line). 
+
+DONE. 
