@@ -10,7 +10,7 @@ Sample names in the .VCF files (*thin350.Filtered.vcf.gz* or *OlyO_depth50nomiss
 \
 Metadata.OlyOyster.csv shows the metadata (GPS coordinates and other site info).
 
-Primer Sequences (with and without Illumina adaptors) are the sequences of each primer for each amplicon. 
+Primer Sequences (OlyO_GTseq375_Primers.xlsx - with and without Illumina adaptors) are the sequences of each primer for each amplicon. OlyO_GTseq375_Primers-notag.csv is the file used int he microhaplotype processing script.
 
 
 **Raw Fastq data** \
