@@ -8,7 +8,9 @@ VCF files that precede the genepop files are also available in the repository. t
 
 Sample names in the .VCF files (*thin350.Filtered.vcf.gz* or *OlyO_depth50nomiss.vcf.gz*) are shortened in some cases, but the sample numbers are consistent across file types. "WB" is Willapa bay, "MB" is Mystery Bay, "LS" is Little Skookum Inlet, "BL" is Burley Lagoon, "PGB" is Port Gamble Bay, "Disco" is Discovery Bay, "FB" is Fidalgo Bay, "CS" is Central Sound or Mud Bay. See metadata summary file for GPS coordinates and other site info. Note that the "thin350" file is filtered to just one SNP per amplicon (and filtered for missingness etc) while the "OlyO_depth50" file has all 8000 variants across amplicons with minimal filtereing (i.e. is closer to a raw file). 
 \
-Metadata.OlyOyster.csv shows the metadata (GPS coordinates and other site info). 
+Metadata.OlyOyster.csv shows the metadata (GPS coordinates and other site info).
+
+Primer Sequences (with and without Illumina adaptors) are the sequences of each primer for each amplicon. 
 
 
 **Raw Fastq data** \
@@ -16,5 +18,5 @@ Raw fastq files available at SRA archive: PRJXXXXXXX (https://www.ncbi.nlm.nih.g
 \
 **Code**\
 "Plink to genepop code" is a simple set of BASH commands to convert PLINK raw format to genepop. 
-
+Other files to include: R CLUMPP code,  
 
