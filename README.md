@@ -18,5 +18,5 @@ Raw fastq files available at SRA archive: PRJXXXXXXX (https://www.ncbi.nlm.nih.g
 \
 **Code**\
 "Plink to genepop code" is a simple set of BASH commands to convert PLINK raw format to genepop. 
-Other files to include: R CLUMPP code,  
+"CLUMPP-style_Structure_convergence%20statistics.R" calculates convergence statistics for structure runs at various Ks. Used to assess how well Structure runs converged for SNP dataset and microhaplotype dataset. 
 
